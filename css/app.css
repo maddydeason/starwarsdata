@@ -10,6 +10,9 @@ body {
 	width: 100% !important;
 	height: 100% !important;
 }
+iframe {
+	margin: 0 auto;
+}
 
 /* ---- TOP BAR ---- */
 /*.logo {
@@ -26,7 +29,6 @@ body {
 	font-family: 'Audiowide', monotype;
 	text-transform: uppercase;
 	border-bottom: 2px solid #ffe401;
-	margin-top: 5rem;
 }
 
 .header h5 {
@@ -36,3 +38,6 @@ body {
 }
 
 /* ---- SECTIONS ---- */
+section {
+	padding: 2rem 1rem;
+}
