@@ -13,6 +13,13 @@ body {
 iframe {
 	margin: 0 auto;
 }
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Audiowide', monotype;
+}
+p {
+	font-family: 'montserrat', sans-serif;
+	font-size: .8rem;
+}
 
 /* ---- TOP BAR ---- */
 /*.logo {
@@ -26,7 +33,6 @@ iframe {
 }
 
 .header h1 {
-	font-family: 'Audiowide', monotype;
 	text-transform: uppercase;
 	border-bottom: 2px solid #ffe401;
 }
@@ -37,7 +43,23 @@ iframe {
 	font-family: 'montserrat', sans-serif !important;
 }
 
+.byline {
+	font-size: .5rem;
+}
+
+.blue-text {
+	color: #011CFF;
+}
+
 /* ---- SECTIONS ---- */
 section {
 	padding: 2rem 1rem;
+}
+.white {
+	background: #fff;
+}
+
+/* ---- IMAGES ---- */
+img {
+	margin-bottom: 3rem;
 }
