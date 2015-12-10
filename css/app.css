@@ -1,0 +1,38 @@
+/*custom CSS*/
+
+/* ---- GLOBAL ---- */
+body {
+	background: url(../img/stardust.png) no-repeat center center fixed !important; /* from subtle patterns */
+	background-size: cover !important;
+	-webkit-background-size: cover !important;
+	-moz-background-size: cover !important;
+	-o-background-size: cover !important;
+	width: 100% !important;
+	height: 100% !important;
+}
+
+/* ---- TOP BAR ---- */
+/*.logo {
+	height: 15px;
+}*/
+
+/* ---- TEXT ---- */
+.header h1, .header h5{
+	color: #ffe401;
+	letter-spacing: 1px;
+}
+
+.header h1 {
+	font-family: 'Audiowide', monotype;
+	text-transform: uppercase;
+	border-bottom: 2px solid #ffe401;
+	margin-top: 5rem;
+}
+
+.header h5 {
+	font-weight: 100;
+	margin-top: 1.2rem;
+	font-family: 'montserrat', sans-serif !important;
+}
+
+/* ---- SECTIONS ---- */
