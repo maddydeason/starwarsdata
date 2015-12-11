@@ -53,10 +53,22 @@ p {
 
 /* ---- SECTIONS ---- */
 section {
-	padding: 2rem 1rem;
+	padding: 3rem 1rem;
 }
 .white {
 	background: #fff;
+}
+.footer h4, .footer p, .footer i{
+	color: #ffe401 !important;
+	text-align: right;
+}
+.footer a {
+	float: right;
+	padding: 5px;
+}
+.footer a:hover {
+	color: #111;
+	background: #ffe401;
 }
 
 /* ---- IMAGES ---- */
