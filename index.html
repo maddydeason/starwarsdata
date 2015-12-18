@@ -1,85 +1,224 @@
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
+    <script src="js/vendor/jquery.min.js"></script>
+      <style type="text/css">
+        ${demo.css}
+      </style>
+
+    <style>
+      h2 {
+	color: #FFE401;
+}
+p {
+	color: #FFFFFF;
+}
+.odds
+{
+  color: #011CFF;
+}
+.content {
+	margin-left: auto;
+	margin-right: auto;
+}
+    </style>
+    
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- The Meta -->
-    <meta name="description" content="DESCRIPTION HERE">
-    <meta name="keywords" content="KEYWORDS HERE">
+    <!--The Meta &mdash;-->
+    <meta name="description" content="Star Wars Data: A data-driven analysis of the greatest movie franchise of all time">
+    <meta name="keywords" content="Star Wars Data">
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="SITE URL HERE">
-    <meta name="twitter:title" content="TITLE HERE">
-    <meta name="twitter:description" content="DESCRIPTION HERE">
+    <meta name="twitter:site" content="@cnsmd">
+    <meta name="twitter:title" content="Star Wars Data">
+    <meta name="twitter:description" content="A data-driven analysis of the greatest movie franchise of all time">
     <meta name="twitter:creator" content="@CNSmd">
     <!-- Twitter Summary card images must be at least 120x120px -->
-    <meta name="twitter:image" content="LINK TO AN IMAGE HERE">
+    <meta name="twitter:image" content="http://starwarsdata.com/img/fb.png">
 
     <!-- Open Graph data -->
-    <meta property="og:title" content="TITLE HERE" />
+    <meta property="og:title" content="Star Wars Data" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="SITE URL HERE" />
-    <meta property="og:image" content="LINK TO AN IMAGE HERE" />
-    <meta property="og:description" content="DESCRIPTION HERE" /> 
-    <meta property="og:site_name" content="SITE NAME HERE" />
+    <meta property="og:url" content="http://starwarsdata.com" />
+    <meta property="og:image" content="http://starwarsdata.com/img/fb.png" />
+    <meta property="og:description" content="A data-driven analysis of the greatest movie franchise of all time" /> 
+    <meta property="og:site_name" content="CNS Maryland" />
 
-    <title>Star Wars Data | CNS</title>
+    <title>Star Wars Data</title>
+    
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/app.css" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-3dkvEK0WLHRJ7/Csr0BZjAWxERc5WH7bdeUya2aXxdU= sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg==" crossorigin="anonymous">
+      
+     
   </head>
   <body>
     <section id="top">
       <div class="row">
-        <div class="large-10 large-offset-1 end columns">
+        <div class="large-8 large-offset-2 medium-10 medium-offset-1 small-12 end columns">
           <div class="header">
             <h1>Star Wars Data</h1>
-            <h5>If you've ever watched the opening scroll of a New Hope and thought 'Exactly how long ago are we talking? and just how far away is this galaxy, in parsecs?' then this site is for you.</h5>
+            <h3 style="color:#FFFFFF;">A data-driven analysis of the greatest movie franchise of all time</h4>
+             <div class="text-center byline">By Joe Zimmermann, Joey Trull and Madeleine Deason</div> 
+             <div class="cns text-center"><a href="http://cnsmaryland.org" target="_blank">Capital News Service</a></div>
+            <p>Collectively, we've seen the <em>Star Wars</em> movies &mdash; even the newer, less good ones &mdash; dozens of times.  But we still had questions.</p> 
+            <p>Weird questions that remained unanswered, mostly because no one had taken the time to collect the data. Like:</p>
+            <ul>
+                <li>Exactly how terrible are Stormtroopers at doing their job?</li>
+                <li>Does Yoda actually talk like Yoda? Or is his speech more normal than we all remember?</li>
+                <li>Who has more lines in each of the movies: women or robots?</li>
+                <li>Which character kills the most people?</li>
+            </ul>   
+            <p>We watched the movies over and over, painstakingly building the dataset required to answer those questions, plus a few others.</p>
+            <p>It was hard work, but we were not afraid.  We found the droids we were looking for &mdash; and some surprises. Here's what we learned.</p>   
+
+
           </div>
         </div>
       </div>
     </section>
-    <section>
-      <div class="row">
-        <div class="large-10 large-offset-1 end columns">
-          <iframe width="100%" height="520" frameborder="0" src="https://joeyx7.cartodb.com/viz/21fca7f0-775e-11e5-b0ea-0ef24382571b/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+    
+     <section class="content">
+        <div class="large-8 large-offset-2 medium-10 medium-offset-1 small-12 end columns">
+          <h3 style="color:#FFE401; margin-top:10%;">Yoda Speaks in Proper English Much More Than You Remember, at Least in the Beginning</h2>
+          <p>Even people unfamiliar with the <em>Star Wars</em> movies know that the little green guy talks backwards.
+          </p>
+          <p>In reality, Yoda uses proper English syntax more frequently than he’s given credit for. We know, because we analyzed every line spoken by the Jedi master and found an interesting trend.</p>
+          <p>In his first movie, <em>The Empire Strikes Back</em>, he uses proper English syntax about 60 percent of the time, and Yoda-speak the other 40 percent.  But after that, the ratio flips and he speaks progressively more Yoda-like as the series continues.  By <em>Revenge of the Sith</em>, the last of the prequels, 80 percent of his lines are Yoda-speak. As his famous phrases were repeated and recycled through the pop-culture mill, we all came to believe Yoda talked backwards, and the screenwriters gave us what we expected.</p>
+          <div id="yoda" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+          <p>Yet even when Yoda isn’t using typical English syntax, he isn’t really talking backwards either.  We know this, because we diagrammed all of his lines and grouped them into categories.  Normal English syntax follows a subject-verb-object construction (“You (subject) must be (verb) careful (object)”). When we think of Yoda talking backwards, he's actually following an uncommon object-subject-verb construction (“Careful, you must be”). </p>
+          <p>But even this structure only accounts for less than a quarter of his lines, and he barely uses it at all in his early appearances. For the most part, Yoda has little consistency, tossing around objects and prepositions, or even dropping verbs at random, as this chart shows. </p>
+          <img src="images/yodaspeak.png" style="width: 100%;">
         </div>
+    </section>
+    <section class="content">
+        <script  src="https://code.highcharts.com/highcharts.js"></script>
+        <div class="large-8 large-offset-2 medium-10 medium-offset-1 small-12 end columns">
+          <h3 style="color:#FFE401;">Stormtroopers are Terrible Soldiers<h2>
+          <p>Surveying a slaughter of Jawas in <em>A New Hope</em>, Obi-Wan Kenobi argues that Stormtroopers must have been responsible, because the laser blasts were too accurate for Sandpeople to have done the deed.  "Only Imperial stormtroopers are so precise," he said.</p>
+          <p>LOL. Sorry, Obi-Wan, but you're wrong.  We counted each and every laser blast &mdash; hits and misses &mdash; in every movie and found that Stormtroopers miss at a higher rate than all but two characters. They are terrible shots.</p> 
+          <p>Stormtroopers should be frightening. They appear devoid of emotion. And they carry huge guns and work for the Galactic Empire, an institution that, as the opening crawl makes clear, is plainly “evil.”</p>
+          <p>But in the vast majority of ground battles, they fail to hit a single rebel.</p>
+        
+        <div id="stormtroopermisses" style="min-width: 300px; height: 400px; margin: 0 auto"></div>
+          <p>In their first appearance, attacking Tantive IV — the ship carrying Leia, R2-D2 and C-3PO — stormtroopers are fairly accurate, crushing the rebel troops and actually hitting their targets nine times, while missing 14 times. From there, we only see them hit three more targets in the rest of the series!</p>
+          
+          <p>Though their poor performance on the Death Star could be chalked up to letting the Millennium Falcon crew escape so the Empire could follow them to the secret Rebel Alliance base, their record in following scenes suggest this is not an unusual circumstance.</p>
+          
+          <p>In <i>The Empire Strikes Back</i>, they have an especially bad streak, taking at least 66 shots that miss and only  hitting someone once — almost off-screen, when it's implied they shoot C-3PO.</p>
+          
+          <p>Their accuracy rate &mdash; one in 20 of their shots hit their target &mdash; is dismal compared to the Rebel Alliance, who connect about once out of every three shots. </p>
+          
+          <p>However, they don't fare all that much worse than other assorted villains.  At least they're better than Boba Fett, who never actually hits anyone before falling into the Sarlacc pit to be slowly digested for 1,000 years.</p>
+          
+         
+          <div id="accuracy" style="min-width: 300px; height: 400px; margin: 0 auto"></div>
+        
+          <p>Generally, it's not so much that stormtroopers are bad shots; it's that the bad guys are. In typical heroic-movie fashion, they're strikingly less adept at anything than the good guys. And since the good guys have to make it out of harrowing battles alive, it's necessary that the people shooting at them miss a comical number of times.</p>
+          
+    </section>
+    
+   
+     
+     <section class="content">
+        <div class="large-8 large-offset-2 medium-10 medium-offset-1 small-12 end columns">
+            <h3 style="color:#FFE401;">Star Wars Gives More Prominence to Robots Than Women</h2>
+            <p><i>Star Wars</i> is not a franchise with a shining history of gender equality. In the original trilogy, there's Princess Leia, and essentially no other meaningful women. </p>
+            <p>Leia is a tough female character — her problematic slave outfit notwithstanding — and she’s a central character in the original movies, fighting alongside Luke Skywalker and Han Solo. However, looking at the number of lines of dialogue for character, it’s clear that Luke and Han were always meant to be far more prominent. Not only do both of them speak far more than Leia in each movie, C-3PO often had more lines, too. </p>
+            <div id="lines" style="min-width: 310px; height: 600px; margin: 0 auto"></div>
+            <p>This is consistent among all the <i>Star Wars</i> films, where the number of lines for female characters tends to fall somewhere between aliens and robots, dwarfed by the massive line counts for male characters. </p>
+            <div id="women" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+        </div>
+    </section>
+     
+
+    <section class="content">
+        <div class="large-8 large-offset-2 medium-10 medium-offset-1 small-12 end columns">
+          <h3 style="color:#FFE401;margin-top:10%;">Characters Lose Limbs in Every Movie Except 'The Phantom Menace'</h3>
+          <p>The Star Wars galaxy is a dangerous place, where characters are constantly losing arms or hands. Five of the six Star Wars movies each feature this particular brand of dismemberment, suggesting George Lucas is a little too obsessed with limb violence. Aside from these unwilling amputations, Luke and Leia are both shot in the hand or arm, and his script has Han warn that Wookiees apparently “pull people's arms out of their sockets” when they lose at space board games. </p>
+          <img src="images/arms.png" style="width: 100%;">
+          <p>Obi-Wan leads the pack, cutting off the most hands (7). C-3PO and Anakin/Darth Vader tied for most hands lost: both have these limbs severed an unfortunate three times in the series.</p>
+          <div id="arms" style="min-width: 300px; height: 400px; margin: 0 auto"></div>
+          <p>However C-3PO looks like he might have the upper hand in this arms race, as trailers for <i>The Force Awakens</i> show him with a distinctive red appendage, and one rarely needs a new arm unless they’ve lost the old one. </p>
+          <div id="armloss" style="min-width: 300px; height: 400px; margin: 0 auto"></div>
+        </div>
+    </section>
+    
+    <section class="content">
+        <div class="large-8 large-offset-2 medium-10 medium-offset-1 small-12 end columns">
+          <h3 style="color:#FFE401;margin-top:10%;">The Prequels are More Violent Than Most of the Original Series, Except for 'Return of the Jedi'</h2>
+          <p>As titles go, <em>Star Wars</em> is fairly descriptive. These are quite literally war movies taking place in space. As such, there’s no shortage of carnage. </p>
+          <p>The body count in each of these movies is high. The prequels are particularly violent. However, <em>The Empire Strikes Back</em>, usually considered the darkest of the original trilogy, is actually fairly peaceful, with few deaths on-screen.</p>
+          <div id="bodycount" style="min-width: 300px; height: 400px; margin: 0 auto"></div>
+          <p>In both of these graphics, note that we're not counting deaths that take place off-screen.  Otherwise, the title of most murderous would probably go to Grand Moff Tarkin, who orders the Death Star to destroy Alderaan &mdash; population 2 billion, according to Wookieepedia &mdash; in Episode IV.</p>
+          <p>In terms of on-screen kills, Darth Vader has the most, as you'd expect, followed by Luke.</p>
+          <div id="kills" style="min-width: 300px; height: 400px; margin: 0 auto"></div>
+        </div>
+    </section>
+
+    <section class="content">
+      <div class="large-8 large-offset-2 medium-10 medium-offset-1 small-12 end columns">
+        <h3 style="color:#FFE401;margin-top:10%;">Chewbacca Makes a Lot of Noise</h2>
+        <p>We have no idea what Chewbacca is saying when he unleashes one of his signature growls, derived from recordings of badgers, lions, bears, seals and other animals (according to <a href="http://www.theatlantic.com/technology/archive/2014/08/the-remarkable-way-chewbacca-got-a-voice/375697/" target="_blank">The Atlantic</a>).  At least Han understands him.</p>         
+        <img src="images/wookiee.png" style="min-width: 300px; width:100%;">
       </div>
     </section>
-    <section class="white">
+
+   
+    <section class="content">
+        <!-- Death Star original icon provided by Steve Morris https://thenounproject.com/stevemorris/ -->
+          <div class="large-8 large-offset-2 medium-10 medium-offset-1 small-12 end columns">
+              <h3 style="color:#FFE401;margin-top:10%;">Star Wars Was Filmed on Five out of Seven Continents</h2>
+              <p>Star Wars is truly a global franchise.  Not only has it attracted huge worldwide audiences, the first six films were filmed on location in five continents &mdash; Asia, North America, Europe, Africa and Australia.</p>
+              <p>George Lucas skipped only two &mdash; Antarctica and South America.  The Amazon rainforest could have provided a good backdrop for Yoda's swampy Degobah planet, instead of the soundstage in London where those scenes were shot.  And Antarctica would have been a perfect stand-in for the ice planet Hoth, but it was filmed in Norway.</p>
+              <p>On this map, we've also included the shooting locations for Episode VII.</p>       
+              <iframe width="100%" height="520" frameborder="0" src="https://joeyx7.cartodb.com/viz/21fca7f0-775e-11e5-b0ea-0ef24382571b/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+          </div>
+    </section>
+    <section class="content">
       <div class="row">
-        <div class="large-10 large-offset-1 end columns">
+            <div class="large-8 large-offset-2 medium-10 medium-offset-1 small-12 end columns">
+              <h3 style="color:#FFE401;margin-top:10%;">You are More Likely to be Born with 11 Toes than Survive a Night on Icy Hoth</h3>
+            <p>"Never tell me the odds," Han screams after C-3PO tells him the chances of surviving a trip through an asteroid field in Episode V. With apologies to Han, here are the odds of three important moments in the original trilogy.</p>
+            </div>  
+            <div class="large-8 large-offset-2 medium-10 medium-offset-1 small-12 end columns white">
+
           <div class="columns">
             <div class="text-center">
-              <h2 class="blue-text">Never Give Me the Odds</h2>
-              <p class="byline">By Joey Trull<br>Sources: Star Wars, NBCNews, Review Journal and Funny2 Odds</p>
+              <!-- Death Star original icon provided by Julien Meysmans https://thenounproject.com/M_Julz/ | One million dots image original provided by http://waitbutwhy.com/2014/11/from-1-to-1000000.html-->
+              <h2 class="blue-text">"Never Tell Me the Odds"</h2>
             </div>
           </div>
           <div class="medium-6 columns">
-            <p>According to R2-D2 and translated by C-3PO, the odds of surviving a night on the planet Hoth are 1 out of 725. (Star Wars: Episode V – The Empire Strikes Back)</p>
-            <p>You have a better chance of being born with 11 fingers and toes, known as polydactylism, with odds of 1 out of 500, than surviving a night on Hoth. The chances of being killed while crossing the street are higher than surviving on Hoth as well at 1 out of 701.</p>
+            <p class="odds">According to R2-D2, as translated by C-3PO, the odds of surviving a night on the planet Hoth are 1 out of 725. (Episode V)</p>
+            <p class="odds">You have a better chance of being born with 11 fingers and toes, known as polydactylism, with odds of 1 out of 500, than surviving a night on Hoth. The chances of being killed while crossing the street are also better than surviving a night on Hoth, at 1 out of 701.</p>
             <h6 class="text-center blue-text">1 : 725</h6>
             <img src="img/Odds1.png">
           </div>
           <div class="medium-6 columns">
-            <p>According to C-3PO, the odds of successfully navigating the Hoth asteroid belt are 1 out of 3,720. (Star Wars: Episode V – The Empire Strikes Back)</p>
-            <p>You have a better chance of being injured while mowing the lawn, with odds of 1 out of 3,623, than navigating the asteroid belt. The chances of falling and dying in the shower are higher than navigating the asteroid belt as well at 1 out of 2,232.</p>
+            <p class="odds">According to C-3PO, the odds of successfully navigating the Hoth asteroid belt are 1 out of 3,720. (Episode V)</p>
+            <p class="odds">You have a better chance of being injured while mowing the lawn, with odds of 1 out of 3,623, than navigating the asteroid belt. The chances of falling and dying in the shower are also better than navigating the asteroid belt, at 1 out of 2,232.</p>
             <h6 class="text-center blue-text">1 : 3,720</h6>
             <img src="img/Odds2.png">
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="large-10 large-offset-1 end columns">
-          <div class="columns">
-            <p>According to Han Solo, the odds of the Death Star killshot are 1 out of 1,000,000. (Star Wars: Episode IV – A New Hope)</p>
-            <p>You have a better chance of winning an Olympic gold medal in your lifetime, with odds of 1 out of 662,000. The chances of being killed by lightning and meteorite strikes are higher than destroying the Death Star as well at 1 out of 700,000.</p>
+       <div class="large-8 large-offset-2 medium-10 medium-offset-1 small-12 end columns white">
+          <div class="columns white">
+            <p class="odds">According to Han, the odds of the Death Star killshot are 1 out of 1,000,000. (Episode IV)</p>
+            <p class="odds">You have a better chance of winning an Olympic gold medal in your lifetime, with odds of 1 out of 662,000. The chances of being killed by lightning or a meteorite strike are higher than destroying the Death Star as well, at 1 out of 700,000.</p>
             <h6 class="text-center blue-text">1 : 1,000,000</h6>
             <img src="img/Odds3.png">
+            <p class="byline">Sources: Star Wars, NBCNews, Review Journal and Funny2 Odds</p>
+
           </div>
         </div>
       </div>
@@ -87,21 +226,782 @@
     <section class="footer">
       <div class="row">
         <div class="large-10 large-offset-1 end columns">
-          <h4>Congratulations!</h4>
-          <p>You have the patience to scroll through 1,000,000 dots.</p>
-          <p>AND PATIENCE YOU MUST HAVE MY YOUNG PADAWAN.</p>
-          <a href="#top"<i class="fa fa-chevron-up"> Back up</i></a>
+          <div class="left">
+           
+          </div>
+          <div class="right">
+            <h4>Congratulations!</h4>
+            <p>You have the patience to scroll through 1,000,000 dots.<br>AND PATIENCE YOU MUST HAVE MY YOUNG PADAWAN.</p>
+            <a href="#top"<i class="fa fa-chevron-up"> Back to top</i></a>
+          </div>
         </div>
       </div>
     </section>
 
-    <script src="js/vendor/jquery.min.js"></script>
+    
     <script src="js/vendor/what-input.min.js"></script>
     <script src="js/foundation.min.js"></script>
     <script src="js/app.js"></script>
-    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <script type="text/javascript">
+        $(function () {
+                     Highcharts.setOptions({
+             colors: ['#FFE401', '#011CFF', '#333333', '#999999']
+            });
+            $('#stormtroopermisses').highcharts({
+                chart: {
+                    type: 'column',
+                    backgroundColor: null,
+                    style:
+                    {
+                      color: '#FFFFFF'
+                    }
+                },
+                title: {
+                    text: 'Stormtroopers Are Terrible Shots',
+                    style:
+                    {
+                      color: '#FFFFFF'
+                    }
+                },
+                subtitle: {
+                    text: 'The hit-to-miss ratio broken down by scene',
+                    style:
+                    {
+                      color: '#FFFFFF'
+                    }
+                    
+                },
+                 xAxis:{
+                 labels:{style:{
+                  color: '#FFFFFF'
+                 }},
+                 categories: [
+                        'Tantive IV fight',
+                        'Mos Eisley escape',
+                        'Detention area attack',
+                        'Detention area reinforcements',
+                        'Death Star escape',
+                        'C-3PO walks into wrong room',
+                        'Cloud City fight',
+                        'Battle of Endor'
+                    ],
+                    crosshair: true,
+                },
+                yAxis: {
+                  labels:{style:{
+                  color: '#FFFFFF'
+                 }},
+                    min: 0,
+                    title: {
+                        text: 'Number of shots',
+                        style:{
+                        color: '#FFFFFF'}
+                    }
+                },
+                credits: {
+                  enabled: false
+                },
+                legend: {
+                    enabled: true,
+                    itemStyle:{
+                        'color': '#FFFFFF',},
+                        itemHoverStyle:{
+                          'color': '#FFE401',
+                        }
+                },
+                style:{
+                        color: '#FFFFFF'}
+                ,
+                tooltip: {
+                    pointFormat: '<b>{series.name}: {point.y}</b>'
+                    },
+               series: [{
+                    name: 'Hits',
+                    data: [9, 0, 0, 0, 0, 1, 0, 2]
+        
+                }, {
+                    name: 'Misses',
+                    data: [14, 8, 5, 64, 97, 0, 66, 5]
+        
+                }]
+            });
+        });
+        $(function () {
+                     Highcharts.setOptions({
+             colors: ['#011CFF', '#FFE401', '#333333', '#999999']
+            });
+        $('#accuracy').highcharts({
+        chart: {
+            type: 'column',
+            backgroundColor: null,
+                    style:
+                    {
+                      color: '#FFFFFF'
+                    }
+        },
+        title: {
+            text: 'Stormtroopers Accuracy is Not Much Worse Than Other Bad Guys',
+            style:
+                    {
+                      color: '#FFFFFF'
+                    }
+        },
+        subtitle: {
+            text: 'Percentage of Accurate Shots of Rebels and Various Villains',
+            style:
+                    {
+                      color: '#FFFFFF'
+                    }
+        },
+        xAxis: {
+            type: 'category',
+            labels: {
+
+                style: {
+                    fontSize: '13px',
+                    color: '#FFFFFF',
+                    fontFamily: 'Verdana, sans-serif'
+                }
+            }
+        },
+        yAxis: {
+            min: 0,
+        max: 100,
+            title: {
+                text: 'Accuracy rate (%)',
+                style: {
+                        color: '#FFFFFF'}
+                },
+            labels:{style:{
+                  color: '#FFFFFF'
+                 }},
+        },
+        legend: {
+            enabled: false
+        },
+        credits: {
+                  enabled: false
+                },
+        tooltip: {
+        //  enabled: false
+            pointFormat: '<b>{point.y:.1f}% accuracy</b>'
+    },
+        series: [{
+            name: '',
+            data: [
+        ['Rebel average', 29.2],
+        ['Other Imperial soldiers', 12.2],
+                ['Bad guy average', 9.7],
+        ['Jabba\'s goons', 7.1],
+        ['Stormtroopers', 4.4],
+        ['Boba Fett', 0],
+        ['Greedo', 0]
+            ],
+            dataLabels: {
+                enabled: true,
+                rotation: 0,
+                color: '#FFFFFF',
+                align: 'center',
+                format: '{point.y}%', // one decimal
+                y: 0, // 10 pixels down from the top
+                style: {
+                    fontSize: '13px',
+                    fontFamily: 'Verdana, sans-serif',
+
+                }
+            }
+        }]
+    });
+        });
+        $(function () {
+         Highcharts.setOptions({
+     colors: ['#FFE401', '#011CFF', '#39e600', '#999999']
+    });
+    $('#lines').highcharts({
+      chart: {
+        backgroundColor: null,
+        style:
+            {
+              color: '#FFFFFF'
+            }
+         },
+        title: {
+            text: 'Leia Has Fewest Lines of Major Characters',
+            style:
+                    {
+                      color: '#FFFFFF'
+                    },
+            x: -20 //center
+        },
+        subtitle: {
+            text: 'Tracking the Number of Lines for the Four Biggest Characters in the Original Series',
+            style:
+                    {
+                      color: '#FFFFFF'
+                    },
+            x: -20
+        },
+        xAxis: {
+            categories: ['Episode IV', 'Episode V', 'Episode VI'],
+            labels: {
+              style: {
+                      color: '#FFFFFF'
+                    }
+            },
+        },
+        yAxis: {
+            title: {
+                text: 'Number of lines',
+                style: {color: '#FFFFFF',}},
+            labels: {
+              style: {
+                      color: '#FFFFFF'
+                    },
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+          crosshairs: true,
+            pointFormat: '<b>{series.name} has {point.y} lines</b>'
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0,
+            floating: true,
+             itemStyle:{
+                        'color': '#FFFFFF',},
+                        itemHoverStyle:{
+                          'color': '#FFE401',
+                        }
+        },
+        credits: {
+          enabled: false
+        },
+        series: [{
+            name: 'Luke',
+            data: [{y: 311, marker: {
+                symbol: 'url(images/luke.png)'
+            }}, 150, 130]
+        }, {
+            name: 'Leia',
+            data: [{y: 57, marker: {
+                symbol: 'url(images/leia.png)'}}, 114, 63]
+        }, {
+            name: 'Han Solo',
+            data: [{y: 157, marker: {
+                symbol: 'url(images/han.png)'
+        }}, 197, 131]
+        }, {
+            name: 'C-3PO',
+            data: [{y: 119, marker: {
+                symbol: 'url(images/c3po.png)'
+        }}, 93, 91],
+        }]
+    });
+});
+$(function () {
+     Highcharts.setOptions({
+     colors: ['#FFE401', '#011CFF', '#39e600', '#999999']
+    });
+    $('#women').highcharts({
+        chart: {
+          backgroundColor: null,
+          style: {
+                color: '#FFFFFF'
+                }
+        },
+        title: {
+            text: 'Either Aliens or Robots Have More Lines Than Women in Most Star Wars Movies',
+            x: -20, //center
+            style:{
+                  color: '#FFFFFF'
+                 },
+        },
+        subtitle: {
+            text: 'Line Count by Demographic',
+            style:{
+                  color: '#FFFFFF'
+                 },
+            x: -20
+        },
+        xAxis: {
+            categories: ['Episode I', 'Episode II', 'Episode III', 'Episode IV', 'Episode V', 'Episode VI'],
+            labels: {style:{
+                  color: '#FFFFFF'
+                 }},
+        },
+        yAxis: {
+            title: {
+                text: 'Number of lines',
+                style: {color: '#FFFFFF'}
+            },
+            labels: {style:{
+                  color: '#FFFFFF'
+                 }},
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+          crosshairs: true,
+          //shared: true,
+             pointFormat: '<b>{series.name} have {point.y} lines</b>'
+        },
+        credits: {
+          enabled: false
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0,
+            y: -50,
+            floating: true,
+             itemStyle:{
+                        'color': '#FFFFFF',},
+                        itemHoverStyle:{
+                          'color': '#FFE401',
+                        }
+        },
+    series: [{
+            name: 'Men',
+            data: [576, 563, 792, 869, 614, 452]
+        },
+    {
+            name: 'Women',
+            data: [176, 129, 135, 64, 115, 75]
+        },
+        {
+            name: 'Aliens',
+            data: [316, 179, 98, 13, 36, 69],
+        },
+        {
+            name: 'Robots',
+            data: [35, 45, 49, 119, 95, 98]
+        }]
+    });
+});
+$(function () {
+         Highcharts.setOptions({
+     colors: ['#FFE401', '#011CFF', '#333333', '#999999']
+    });
+    $('#yoda').highcharts({
+        chart: {
+            type: 'line',
+            backgroundColor: null,
+            style:
+                    {
+                      color: '#FFFFFF'
+                    }
+        },
+        title: {
+            text: 'Yoda Starts Out Speaking Mostly Normal English, Then Switches',
+            style:{
+                  color: '#FFFFFF'
+                 },
+        },
+        subtitle: {
+            text: 'Tracking Yoda\'s Use of Proper English Over His Appearances (Note: he does not appear in Episode IV)',
+            style:{
+                  color: '#FFFFFF'
+                 },
+        },
+        xAxis: {
+            categories: ['Episode V', 'Episode VI', 'Episode I', 'Episode II', 'Episode III'],
+            labels: {style:{
+                  color: '#FFFFFF'
+                 }},
+        },
+        yAxis: {
+            title: {
+                text: 'Percent of lines',
+                style:{
+                  color: '#FFFFFF'
+                 }
+            },
+            labels: {
+                formatter: function () {
+                    return this.value + '%';
+                },
+                style:{
+                 color: '#FFFFFF'
+                }, 
+            }
+        },
+        tooltip: {
+            crosshairs: true,
+            pointFormat: '<b>{point.y}% {series.name}</b>'
+            //formatter: function() {
+        //return 'The value for <b>' + this.x + '</b> is <b>' + this.y + '</b>, in series '+ this.series.name;
+        //    }
+            //pointFormat: '<b>{series.name}{point.y}%</b>'
+        },
+        credits: {
+          enabled: false
+        },
+        legend: {
+          itemStyle:{
+                        'color': '#FFFFFF',},
+                        itemHoverStyle:{
+                          'color': '#FFE401',
+                        }
+        },
+        plotOptions: {
+            spline: {
+                marker: {
+                    radius: 2,
+                    lineColor: '#666666',
+                    lineWidth: 1
+                }
+            }
+        },
+        series: [{
+            name: 'Normal English syntax',
+            data: [{y: 60.8, marker: {
+                symbol: 'url(images/yoda6.png)'
+        }}, 40, 31.9, 38.3, 18.7]
+
+        }, {
+            name: '      Irregular syntax',
+            data: [{y: 39.2, marker: {
+        symbol: 'url(images/yoda7.png)'}}
+        , 60, 68.1, 61.7, 81.3]
+        }]
+    });
+});
+$(function () {
+         Highcharts.setOptions({
+     colors: ['#011CFF', '#FFE401', '#333333', '#999999']
+    });
+    $('#bodycount').highcharts({
+        chart: {
+            type: 'column',
+            backgroundColor: null,
+            style:
+                    {
+                      color: '#FFFFFF'
+                    }
+        },
+        title: {
+            text: 'The Empire Strikes Back Is the Most Peaceful Star Wars Movie',
+            style:{
+                  color: '#FFFFFF'
+                 }
+        },
+        subtitle: {
+            text: 'Counting the On-Screen Deaths in Each Movie',
+            style:{
+                  color: '#FFFFFF'
+                 }
+        },
+        xAxis: {
+            type: 'category',
+            style:{
+                  color: '#FFFFFF'
+                 },
+            labels: {
+                style: {
+                    fontSize: '13px',
+                    fontFamily: 'Verdana, sans-serif',
+                    color: '#FFFFFF'
+                }
+            }
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'On-screen deaths',
+                style:{
+                  color: '#FFFFFF'
+                 }
+            },
+            labels: {style:{
+                  color: '#FFFFFF'
+                 }}
+        },
+        legend: {
+            enabled: false
+        },
+        tooltip: {
+            pointFormat: '<b>{point.y} deaths</b>'
+        },
+        credits: {
+          enabled: false
+        },
+        series: [{
+            name: '',
+            data: [
+        ['Episode I', 116],
+        ['Episode II', 112],
+                ['Episode III', 155],
+        ['Episode IV', 68],
+        ['Episode V', 25],
+        ['Episode VI', 156],
+            ],
+            dataLabels: {
+                enabled: true,
+                rotation: 0,
+                color: '#FFFFFF',
+                align: 'center',
+                format: '{point.y}', // one decimal
+                y: 0, // 10 pixels down from the top
+                style: {
+                    fontSize: '13px',
+                    fontFamily: 'Verdana, sans-serif'
+                }
+            }
+        }]
+    });
+});
+$(function () {
+         Highcharts.setOptions({
+     colors: ['#011CFF', '#FFE401', '#333333', '#999999']
+    });
+    $('#kills').highcharts({
+        chart: {
+            type: 'column',
+            backgroundColor: null,
+            style:
+                    {
+                      color: '#FFFFFF'
+                    }
+        },
+        title: {
+            text: 'Darth Vader is the Most Murderous Character',
+            style:{
+                  color: '#FFFFFF'
+              }
+        },
+        subtitle: {
+            text: 'Comparing the Number of People/Sentient Aliens Killed by Major Characters',
+            style:{
+                  color: '#FFFFFF'
+              }
+        },
+        xAxis: {
+            type: 'category',
+            labels: {
+                style: {
+                    fontSize: '13px',
+                    fontFamily: 'Verdana, sans-serif',
+                    color: '#FFFFFF'
+                }
+            }
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Number of kills',
+                style:{
+                  color: '#FFFFFF'
+              }
+            },
+            labels: {
+              style:{
+                  color: '#FFFFFF'
+              }
+            }
+        },
+        legend: {
+            enabled: false
+        },
+        credits: {
+          enabled: false
+        },
+        tooltip: {
+            pointFormat: '<b>Kills {point.y}</b>'
+        },
+        series: [{
+            name: 'Population',
+            data: [
+        ['Darth Vader', 36],
+                ['Luke', 22],
+        ['Han', 21],
+        ['Leia', 10],
+        ['Chewbacca', 7],
+                ['Yoda', 6],
+                ['Obi-Wan', 5],
+                ['Padme', 1],
+                ['Mace Windu', 1]
+            ],
+            dataLabels: {
+                enabled: true,
+                rotation: 0,
+                color: '#FFFFFF',
+                align: 'right',
+                format: '{point.y}', // one decimal
+                y: 0, // 10 pixels down from the top
+                style: {
+                    fontSize: '13px',
+                    fontFamily: 'Verdana, sans-serif'
+                }
+            }
+        }]
+    });
+});
+$(function () {
+         Highcharts.setOptions({
+     colors: ['#011CFF', '#FFE401', '#333333', '#999999']
+    });
+    $('#arms').highcharts({
+        chart: {
+            type: 'column',
+            backgroundColor: null,
+            style:
+                    {
+                      color: '#FFFFFF'
+                    }
+        },
+        title: {
+            text: 'Obi-Wan Hates Arms, Apparently',
+            style:
+                    {
+                      color: '#FFFFFF'
+                    }
+        },
+        subtitle: {
+            text: 'Repeat Offenders for Cutting off Upper Limbs',
+            style:
+                    {
+                      color: '#FFFFFF'
+                    }
+        },
+        xAxis: {
+            type: 'category',
+            labels: {
+                style: {
+                    fontSize: '13px',
+                    fontFamily: 'Verdana, sans-serif',
+                    color: '#FFFFFF'
+                }
+            }
+        },
+        yAxis: {
+            min: 0,
+            labels: { style: {
+                      color: '#FFFFFF'
+                    }},
+            title: {
+                text: 'Number of arms cut off',
+                style:
+                    {
+                      color: '#FFFFFF'
+                    }
+            },
+        },
+        legend: {
+            enabled: false
+        },
+        tooltip: {
+            pointFormat: '<b>Cuts off {point.y}</b>'
+        },
+        credits: {enabled: false},
+        series: [{
+            name: '',
+            data: [
+        ['Obi-Wan', 7],
+        ['Anakin/Darth Vader', 6],
+                ['Luke', 2],
+        ['Count Dooku', 1],
+        ['Yoda', 1]
+            ],
+            dataLabels: {
+                enabled: true,
+                
+                color: '#FFFFFF',
+               
+                format: '{point.y}', // one decimal
+              
+            }
+        }]
+    });
+});
+$(function () {
+         Highcharts.setOptions({
+     colors: ['#011CFF', '#FFE401', '#333333', '#999999']
+    });
+    $('#armloss').highcharts({
+        chart: {
+            type: 'column',
+            backgroundColor: null,
+            style: {
+                color: '#FFFFFF'
+                }
+        },
+        title: {
+            text: 'C-3PO and Darth Vader Have Lost Arms More Than Twice',
+            style: {
+                color: '#FFFFFF'
+                }
+        },
+        subtitle: {
+            text: 'Repeat Arm Losses',
+            style: {
+                color: '#FFFFFF'
+                }
+        },
+        xAxis: {
+            type: 'category',
+            labels: {
+                style: {
+                    fontSize: '13px',
+                    fontFamily: 'Verdana, sans-serif',
+                    color: '#FFFFFF'
+                }
+            }
+        },
+        yAxis: {
+            min: 0,
+            labels: { style: {
+                color: '#FFFFFF'
+                }},
+            title: {
+                text: 'Number of times an arm or hand is lost',
+                style: {
+                color: '#FFFFFF'
+                }
+            }
+        },
+        legend: {
+            enabled: false
+        },
+        credits: {
+          enabled: false
+        },
+        tooltip: {
+            pointFormat: '<b>Loses {point.y}</b>'
+        },
+        series: [{
+            name: '',
+            data: [
+        ['C-3PO', 3],
+        ['Anakin/Darth Vader', 3],
+        ['Count Dooku', 2],
+                ['General Grievous', 2]
+            ],
+            dataLabels: {
+                enabled: true,
+                color: '#FFFFFF',
+                style: {
+                    fontSize: '13px',
+                    fontFamily: 'Verdana, sans-serif'
+                }
+            }
+        }]
+    });
+});
+    </script>
+    <!&mdash; Go to www.addthis.com/dashboard to customize your tools &mdash;>
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5601aaf880c57af7" async="async"></script>
-    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <!&mdash; Go to www.addthis.com/dashboard to customize your tools &mdash;>
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5601aaf880c57af7" async="async"></script>
     <script>
      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

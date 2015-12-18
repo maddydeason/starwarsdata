@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Stormtroopers Miss A Lot</title>
+
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<style type="text/css">
+${demo.css}
+		</style>
+		<script type="text/javascript">
+$(function () {
+	     Highcharts.setOptions({
+     colors: ['#FFE401', '#011CFF', '#333333', '#999999']
+    });
+    $('#stormtroopermisses').highcharts({
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Stormtroopers Miss A Lot'
+        },
+        subtitle: {
+            text: ''
+        },
+         xAxis: {
+            categories: [
+                'Tantive IV fight',
+                'Mos Eisley escape',
+                'Detention area attack',
+                'Detention area reinforcements',
+                'Death Star Escape',
+                'C-3PO walks into wrong room',
+                'Cloud City fight',
+                'Battle of Endor'
+            ],
+            crosshair: true
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Number of shots'
+            }
+        },
+        legend: {
+            enabled: false
+        },
+        tooltip: {
+            pointFormat: '<b>{series.name}: {point.y}</b>'
+        },
+       series: [{
+            name: 'Hits',
+            data: [9, 0, 0, 0, 0, 1, 0, 2]
+
+        }, {
+            name: 'Misses',
+            data: [14, 8, 5, 64, 97, 0, 66, 5]
+
+        }]
+    });
+});
+		</script>
+	</head>
+	<body>
+<script  src="https://code.highcharts.com/highcharts.js"></script>
+
+<div id="stormtroopermisses" style="min-width: 300px; height: 400px; margin: 0 auto"></div>
+
+	</body>
+</html>

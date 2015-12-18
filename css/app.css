@@ -1,5 +1,14 @@
 /*custom CSS*/
-
+h2 {
+	color: #FFFFFF;
+}
+p, ul, li {
+	color: #FFFFFF;
+}
+.content {
+	margin-left: auto;
+	margin-right: auto;
+}
 /* ---- GLOBAL ---- */
 body {
 	background: url(../img/stardust.png) no-repeat center center fixed !important; /* from subtle patterns */
@@ -14,11 +23,29 @@ iframe {
 	margin: 0 auto;
 }
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Audiowide', monotype;
+	font-family: 'Gil Sans', 'Audiowide', monotype;
 }
-p {
-	font-family: 'montserrat', sans-serif;
-	font-size: .8rem;
+p, ul, li {
+	font-family: 'News Gothic', 'montserrat', sans-serif;
+	font-size: .9rem;
+}
+
+#top p {
+	font-size: 1rem;
+}
+
+#top li {
+	font-size: 1rem;
+	color: #ffe401;
+
+}
+
+.right {
+	float: right;
+	text-align: right;
+}
+.left {
+	float: left;
 }
 
 /* ---- TOP BAR ---- */
@@ -27,7 +54,7 @@ p {
 }*/
 
 /* ---- TEXT ---- */
-.header h1, .header h5{
+.header h1, .header h5, .header h4, .header h3, .byline {
 	color: #ffe401;
 	letter-spacing: 1px;
 }
@@ -37,14 +64,37 @@ p {
 	border-bottom: 2px solid #ffe401;
 }
 
-.header h5 {
+.content h3 {
+	border-bottom: 2px solid #ffe401;
+}
+
+.header h5, .header h4, .header h3 {
 	font-weight: 100;
 	margin-top: 1.2rem;
 	font-family: 'montserrat', sans-serif !important;
 }
 
 .byline {
-	font-size: .5rem;
+	font-size: .8rem;
+	width: 50%;
+	margin: 20px auto 0px auto;
+	font-family: 'Gil Sans', 'Audiowide', monotype;
+}
+
+.cns {
+	color: #ffffff;
+	width: 50%;
+	font-size: .8rem;
+	margin: 0px auto 20px auto;
+	text-transform: uppercase;
+	font-family: 'montserrat', sans-serif !important;
+
+}
+
+@media and screen (max-width: 600px) {
+	.cns, .byline {
+		width: 90% !important;
+	}
 }
 
 .blue-text {
@@ -53,22 +103,23 @@ p {
 
 /* ---- SECTIONS ---- */
 section {
-	padding: 3rem 1rem;
+	padding: 1rem 1rem;
 }
 .white {
 	background: #fff;
 }
 .footer h4, .footer p, .footer i{
 	color: #ffe401 !important;
-	text-align: right;
 }
 .footer a {
-	float: right;
 	padding: 5px;
 }
 .footer a:hover {
 	color: #111;
 	background: #ffe401;
+}
+.footer {
+	margin-bottom: 2rem;
 }
 
 /* ---- IMAGES ---- */
